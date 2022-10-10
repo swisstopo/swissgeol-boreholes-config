@@ -21,9 +21,13 @@ Spin up the Docker containers in detached mode.
 ~$ docker-compose up -d
 ```
 
-## Automatic Updates for Docker Containers
+## Environment variables
 
-Docker containers automatically get updated with [Watchtower](https://containrrr.dev/watchtower/). If a new image gets pushed to the registry Watchtower will automatically spin up a new container with the same options that were used when it was deployed initially. Refer to the [docker-compose.yml](./docker-compose.yml) for more details.
+Container images are configured using a `.env` file passed at runtime. Refer to the [dotenv](./.env.template) template file for a complete list of the parameters and their documentation.
+
+## Automatic Container Updates
+
+Bohrdatenmanagementsystem Docker containers automatically get updated with [Watchtower](https://containrrr.dev/watchtower/). If a new image gets pushed to the registry Watchtower will automatically spin up a new container with the same options that were used when it was deployed initially. Refer to the [dotenv](./.env.template) for scheduling options.
 
 ## License
 
