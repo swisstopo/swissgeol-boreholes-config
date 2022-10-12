@@ -52,7 +52,7 @@ db:
 
 ### S3-Compatible Object Storage
 
-In oder to be able to upload and save borehole attachements a S-3 compatible object storage must be configured. For testing purposes you can spin up a dockerized object storage.
+In order to be able to upload and save borehole attachments a S3 compatible object storage must be configured. For testing purposes, you can spin up a dockerized object storage.
 
 ```yml
 minio:
