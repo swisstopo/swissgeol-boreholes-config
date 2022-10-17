@@ -62,8 +62,8 @@ minio:
     MINIO_ROOT_PASSWORD: mysecretpassword
     MINIO_CONSOLE_ADDRESS: 9001
   ports:
-      - 9000:9000 # object storage server address
-      - 9001:9001 # embedded console user interface
+    - 9000:9000 # object storage server address
+    - 9001:9001 # embedded console user interface
   command: minio server /home/shared
 ```
 
@@ -75,8 +75,8 @@ In order to be able to send feedbacks and bug reports from within the Bohrdatenm
 mailhog:
   image: mailhog/mailhog
   ports:
-      - 1025:1025 # SMTP server address
-      - 8025:8025 # web-interface / admin console
+    - 1025:1025 # SMTP server address
+    - 8025:8025 # web-interface / admin console
 ```
 
 ## Automatic Container Updates
