@@ -32,9 +32,9 @@ Container images are configured using a `.env` file passed at runtime. Refer to 
 A PostgreSQL database with the following extensions enabled and a pre-configured user which has the permission to create databases.
 
 ```sql
-CREATE EXTENSION ltree;
-CREATE EXTENSION pgcrypto;
-CREATE EXTENSION postgis;
+CREATE EXTENSION IF NOT EXISTS ltree;
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+CREATE EXTENSION IF NOT EXISTS postgis;
 ```
 
 For testing purposes you can spin up a dockerized PostgreSQL database and use this instance when [configuring](#configure-and-run-bohrdatenmanagementsystem) Bohrdatenmanagementsystem.
