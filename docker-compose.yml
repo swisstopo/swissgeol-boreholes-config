@@ -51,6 +51,7 @@ services:
       - S3_SECRET_KEY
       - S3_SECURE
       - SMTP_SENDER
+      - SMTP_PASSWORD
       - SMTP_RECIPIENTS
       - SMTP_SERVER
       - SMTP_PORT
