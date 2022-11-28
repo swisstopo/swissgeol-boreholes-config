@@ -63,6 +63,21 @@ services:
       - traefik.enable=true
       - traefik.http.routers.api-legacy.rule=Host(`${BASE_DOMAIN}`) && PathPrefix(`/api/v1`)
       - traefik.http.services.api-legacy.loadbalancer.server.port=8888
+  maintenance:
+    image: docker
+    restart: unless-stopped
+    environment:
+      - TZ
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command:
+      - /bin/ash
+      - -c
+      - |
+        apk add --update tzdata
+        > /etc/crontabs/root
+        (crontab -l; echo '50 3 * * * /usr/local/bin/docker system prune --all --force') | crontab -
+        /usr/sbin/crond -f -d 0
   watchtower:
     image: containrrr/watchtower
     restart: unless-stopped
