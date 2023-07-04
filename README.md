@@ -2,6 +2,8 @@
 
 ## Configure and run Bohrdatenmanagementsystem
 
+(For kubernetes deployment see [kubernetes-manifests](./kubernetes-manifests/README.md))
+
 Clone the source repository and cd into the newly created directory
 
 ```bash

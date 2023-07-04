@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: bdms-api-legacy
+  namespace: boreholes
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: HostRegexp(`eu-central-1.elb.amazonaws.com`, `{subdomain:[a-z0-9\-]+}.eu-central-1.elb.amazonaws.com`, `kubernetes.docker.internal`, `boreholes.swissgeol.ch`, `{subdomain:[dev|test]}.boreholes.swissgeol.ch`) && PathPrefix(`/api/v1`)
+      kind: Rule
+      services:
+        - name: bdms-api-legacy
+          port: 80

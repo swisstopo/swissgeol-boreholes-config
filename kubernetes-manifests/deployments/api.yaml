@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bdms-api
+  namespace: boreholes
+  annotations:
+    keel.sh/policy: force
+    keel.sh/match-tag: 'true'
+    keel.sh/trigger: poll
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bdms-api
+  template:
+    metadata:
+      labels:
+        app: bdms-api
+    spec:
+      containers:
+        - name: bdms-api
+          image: ghcr.io/geoadmin/suite-bdms-api:edge
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          env:
+            - name: S3__ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_ACCESS_KEY
+                  optional: true
+            - name: S3__SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_SECRET_KEY
+                  optional: true
+            - name: S3__REGION
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_REGION
+            - name: S3__BUCKET_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_BUCKET_NAME
+            - name: S3__ENDPOINT
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_ENDPOINT
+            - name: S3__SECURE
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_SECURE
+                  optional: true
+            - name: ASPNETCORE_ENVIRONMENT
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: ENVIRONMENT
+            - name: CONNECTIONSTRINGS__BdmsContext
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: DB_CONNECTIONSTRING
+            - name: TZ
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: TZ

@@ -1,0 +1,134 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bdms-api-legacy
+  namespace: boreholes
+  annotations:
+    keel.sh/policy: force
+    keel.sh/match-tag: 'true'
+    keel.sh/trigger: poll
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bdms-api-legacy
+  template:
+    metadata:
+      labels:
+        app: bdms-api-legacy
+    spec:
+      containers:
+        - name: bdms-api-legacy
+          image: ghcr.io/geoadmin/suite-bdms-api-legacy:edge
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8888
+          env:
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: DB_HOST
+            - name: DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: DB_PORT
+                  optional: true
+            - name: DB_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: DB_DATABASE
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: DB_USERNAME
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: DB_PASSWORD
+            - name: S3_ENDPOINT
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_ENDPOINT
+            - name: S3_BUCKET_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_BUCKET_NAME
+            - name: S3_REGION
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_REGION
+            - name: S3_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_ACCESS_KEY
+                  optional: true
+            - name: S3_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_SECRET_KEY
+                  optional: true
+            - name: S3_SECURE
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: S3_SECURE
+                  optional: true
+            - name: SMTP_SENDER
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: SMTP_SENDER
+            - name: SMTP_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: SMTP_PASSWORD
+                  optional: true
+            - name: SMTP_RECIPIENTS
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: SMTP_RECIPIENTS
+            - name: SMTP_SERVER
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: SMTP_SERVER
+            - name: SMTP_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: SMTP_PORT
+                  optional: true
+            - name: SMTP_TLS
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: SMTP_TLS
+                  optional: true
+            - name: SMTP_STARTTLS
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: SMTP_STARTTLS
+                  optional: true
+            - name: APP_BASE_DOMAIN
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: BASE_DOMAIN
+            - name: TZ
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: TZ
