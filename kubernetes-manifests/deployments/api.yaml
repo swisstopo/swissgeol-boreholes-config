@@ -36,11 +36,6 @@ spec:
                   name: boreholes
                   key: S3_SECRET_KEY
                   optional: true
-            - name: S3__REGION
-              valueFrom:
-                secretKeyRef:
-                  name: boreholes
-                  key: S3_REGION
             - name: S3__BUCKET_NAME
               valueFrom:
                 secretKeyRef:
