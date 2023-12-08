@@ -67,3 +67,8 @@ spec:
                 secretKeyRef:
                   name: boreholes
                   key: TZ
+            - name: ReverseProxy__Clusters__pythonApi__Destinations__legacyApi__Address
+              valueFrom:
+                secretKeyRef:
+                  name: boreholes
+                  key: LEGACY_API_ENDPOINT
