@@ -22,7 +22,7 @@ spec:
           image: ghcr.io/geoadmin/suite-bdms-api:edge
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           env:
             - name: S3__ACCESS_KEY
               valueFrom:
