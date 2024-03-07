@@ -69,18 +69,6 @@ minio:
   command: minio server /home/shared
 ```
 
-### SMTP Server (optional)
-
-In order to be able to send feedbacks and bug reports from within the Bohrdatenmanagementsystem a SMTP server must be configured. For testing purposes you can spin up a dockerized email testing tool.
-
-```yml
-mailhog:
-  image: mailhog/mailhog
-  ports:
-    - 1025:1025 # SMTP server address
-    - 8025:8025 # web-interface / admin console
-```
-
 ## Automatic Container Updates
 
 Bohrdatenmanagementsystem Docker containers automatically get updated with [Watchtower](https://containrrr.dev/watchtower/). If a new image gets pushed to the registry Watchtower will automatically spin up a new container with the same options that were used when it was deployed initially. Refer to the [dotenv](./.env.template) for scheduling options.

@@ -78,50 +78,6 @@ spec:
                   name: boreholes
                   key: S3_SECURE
                   optional: true
-            - name: SMTP_SENDER
-              valueFrom:
-                secretKeyRef:
-                  name: boreholes
-                  key: SMTP_SENDER
-            - name: SMTP_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: boreholes
-                  key: SMTP_PASSWORD
-                  optional: true
-            - name: SMTP_RECIPIENTS
-              valueFrom:
-                secretKeyRef:
-                  name: boreholes
-                  key: SMTP_RECIPIENTS
-            - name: SMTP_SERVER
-              valueFrom:
-                secretKeyRef:
-                  name: boreholes
-                  key: SMTP_SERVER
-            - name: SMTP_PORT
-              valueFrom:
-                secretKeyRef:
-                  name: boreholes
-                  key: SMTP_PORT
-                  optional: true
-            - name: SMTP_TLS
-              valueFrom:
-                secretKeyRef:
-                  name: boreholes
-                  key: SMTP_TLS
-                  optional: true
-            - name: SMTP_STARTTLS
-              valueFrom:
-                secretKeyRef:
-                  name: boreholes
-                  key: SMTP_STARTTLS
-                  optional: true
-            - name: APP_BASE_DOMAIN
-              valueFrom:
-                secretKeyRef:
-                  name: boreholes
-                  key: BASE_DOMAIN
             - name: TZ
               valueFrom:
                 secretKeyRef:
