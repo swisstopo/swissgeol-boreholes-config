@@ -26,7 +26,6 @@ services:
     image: ghcr.io/geoadmin/suite-bdms-api:${DOCKER_IMAGE_TAG}
     restart: unless-stopped
     environment:
-      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT}
       - CONNECTIONSTRINGS__BdmsContext=${DB_CONNECTIONSTRING}
       - TZ
       - S3__ENDPOINT=${S3_ENDPOINT}

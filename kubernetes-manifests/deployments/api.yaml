@@ -52,11 +52,6 @@ spec:
                   name: boreholes
                   key: S3_SECURE
                   optional: true
-            - name: ASPNETCORE_ENVIRONMENT
-              valueFrom:
-                secretKeyRef:
-                  name: boreholes
-                  key: ENVIRONMENT
             - name: CONNECTIONSTRINGS__BdmsContext
               valueFrom:
                 secretKeyRef:
