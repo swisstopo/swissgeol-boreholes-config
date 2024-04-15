@@ -14,7 +14,7 @@ helm repo add swissgeol-boreholes https://geoadmin.github.io/config-bdms/
 helm repo update
 
 # Install the swissgeol-boreholes Helm chart
-helm install swissgeol-boreholes geoadmin/swissgeol-boreholes \
+helm install swissgeol-boreholes swissgeol-boreholes/swissgeol-boreholes \
   --namespace 'swissgeol-boreholes' \
   --create-namespace
 ```
@@ -33,7 +33,7 @@ This chart bootstraps the [swissgeol-boreholes](https://github.com/geoadmin/suit
 To install the chart with the release name `swissgeol-boreholes`:
 
 ```bash
-helm install swissgeol-boreholes geoadmin/swissgeol-boreholes
+helm install swissgeol-boreholes swissgeol-boreholes/swissgeol-boreholes
 ```
 
 ## Configuring the Chart
@@ -59,7 +59,7 @@ The following table lists the configurable parameters of the swissgeol-boreholes
 Specify each parameter using the `--set key=value` argument to `helm install`. For example,
 
 ```bash
-helm install swissgeol-boreholes geoadmin/swissgeol-boreholes \
+helm install swissgeol-boreholes swissgeol-boreholes/swissgeol-boreholes \
   --namespace 'swissgeol-boreholes' \
   --create-namespace \
   --set app.domain="dev-boreholes.swissgeol.ch" \
