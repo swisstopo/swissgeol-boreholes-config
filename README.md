@@ -1,4 +1,4 @@
-# Environment configuration for [Bohrdatenmanagementsystem](https://github.com/geoadmin/suite-bdms) (BDMS)
+# Environment configuration for [Bohrdatenmanagementsystem](https://github.com/swisstopo/swissgeol-boreholes-suite) (BDMS)
 
 ## Configure and run Bohrdatenmanagementsystem
 
@@ -7,8 +7,8 @@
 Clone the source repository and cd into the newly created directory
 
 ```bash
-~$ git clone https://github.com/geoadmin/config-bdms.git
-~$ cd config-bdms
+~$ git clone https://github.com/swisstopo/swissgeol-boreholes-config.git
+~$ cd swissgeol-boreholes-suite
 ```
 
 Use the [dotenv](./.env.template) template file to configure environment by copying the contents of the template file into a new _.env_ file.

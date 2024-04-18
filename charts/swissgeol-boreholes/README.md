@@ -2,13 +2,13 @@
 
 # Helm package for swissgeol-boreholes
 
-_swissgeol-boreholes_ is a web application which allows to easily manage structured data about boreholes. The source code is available at [geoadmin/suite-bdms](https://github.com/geoadmin/suite-bdms).
+_swissgeol-boreholes_ is a web application which allows to easily manage structured data about boreholes. The source code is available at [swisstopo/swissgeol-boreholes-suite](https://github.com/swisstopo/swissgeol-boreholes-suite).
 
 ## TL;DR
 
 ```bash
 # Add the swissgeol-boreholes Helm repository
-helm repo add swissgeol-boreholes https://geoadmin.github.io/config-bdms/
+helm repo add swissgeol-boreholes https://swisstopo.github.io/swissgeol-boreholes-suite/
 
 # Update the Helm repositories
 helm repo update
@@ -21,7 +21,7 @@ helm install swissgeol-boreholes swissgeol-boreholes/swissgeol-boreholes \
 
 ## Introduction
 
-This chart bootstraps the [swissgeol-boreholes](https://github.com/geoadmin/suite-bdms) web application as also the required services and deployments in a Kubernetes cluster using the Helm package manager.
+This chart bootstraps the [swissgeol-boreholes](https://github.com/swisstopo/swissgeol-boreholes-suite) web application as also the required services and deployments in a Kubernetes cluster using the Helm package manager.
 
 ## Prerequisites
 
@@ -66,7 +66,7 @@ helm install swissgeol-boreholes swissgeol-boreholes/swissgeol-boreholes \
   --set app.version="edge"
 ```
 
-For a full list of values, you can check the `values.yaml` file or use the `helm show values geoadmin/swissgeol-boreholes` command. Refer to the corresponding Helm [documentation](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing) for more information on how to override settings in a YAML formated file.
+For a full list of values, you can check the `values.yaml` file or use the `helm show values swisstopo/swissgeol-boreholes` command. Refer to the corresponding Helm [documentation](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing) for more information on how to override settings in a YAML formated file.
 
 ## Additional commands
 
