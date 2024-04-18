@@ -8,7 +8,7 @@ Clone the source repository and cd into the newly created directory
 
 ```bash
 ~$ git clone https://github.com/swisstopo/swissgeol-boreholes-config.git
-~$ cd config-bdms
+~$ cd swissgeol-boreholes-suite
 ```
 
 Use the [dotenv](./.env.template) template file to configure environment by copying the contents of the template file into a new _.env_ file.
