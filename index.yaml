@@ -3,6 +3,30 @@ entries:
   swissgeol-boreholes:
   - apiVersion: v2
     appVersion: v2.0.506
+    created: "2024-04-18T12:26:45.042947925Z"
+    description: Borehole Data Management System
+    digest: 074153155d5d7074f8c81545a95421d82b1159f362172884850327758aff3bb7
+    home: https://www.swissgeol.ch/en
+    icon: https://raw.githubusercontent.com/swisstopo/swissgeol-boreholes-suite/main/src/client/public/favicon.ico
+    keywords:
+    - boreholes
+    - swissgeol
+    - geoadmin
+    - bdms
+    maintainers:
+    - email: support@geowerkstatt.ch
+      name: GeoWerkstatt GmbH
+      url: https://www.geowerkstatt.ch/
+    name: swissgeol-boreholes
+    sources:
+    - https://github.com/swisstopo/swissgeol-boreholes-suite
+    - https://github.com/swisstopo/swissgeol-boreholes-config
+    type: application
+    urls:
+    - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-0.2.3/swissgeol-boreholes-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
+    appVersion: v2.0.506
     created: "2024-04-15T13:53:34.300075509Z"
     description: Borehole Data Management System
     digest: fb9f18c281b72efc311ab59c0a9bc4ac4902474bd911caa7b72a03906f29c452
@@ -49,4 +73,4 @@ entries:
     urls:
     - https://github.com/geoadmin/config-bdms/releases/download/swissgeol-boreholes-0.2.1/swissgeol-boreholes-0.2.1.tgz
     version: 0.2.1
-generated: "2024-04-15T13:53:34.30047845Z"
+generated: "2024-04-18T12:26:45.042959887Z"
