@@ -2,7 +2,7 @@
 
 # Helm package for swissgeol-boreholes
 
-_swissgeol-boreholes_ is a web application which allows to easily manage structured data about boreholes. The source code is available at [geoadmin/suite-bdms](https://github.com/geoadmin/suite-bdms).
+_swissgeol-boreholes_ is a web application which allows to easily manage structured data about boreholes. The source code is available at [swisstopo/swissgeol-boreholes-suite](https://github.com/swisstopo/swissgeol-boreholes-suite).
 
 ## TL;DR
 
@@ -21,7 +21,7 @@ helm install swissgeol-boreholes swissgeol-boreholes/swissgeol-boreholes \
 
 ## Introduction
 
-This chart bootstraps the [swissgeol-boreholes](https://github.com/geoadmin/suite-bdms) web application as also the required services and deployments in a Kubernetes cluster using the Helm package manager.
+This chart bootstraps the [swissgeol-boreholes](https://github.com/swisstopo/swissgeol-boreholes-suite) web application as also the required services and deployments in a Kubernetes cluster using the Helm package manager.
 
 ## Prerequisites
 

@@ -1,4 +1,4 @@
-# Environment configuration for [Bohrdatenmanagementsystem](https://github.com/geoadmin/suite-bdms) (BDMS)
+# Environment configuration for [Bohrdatenmanagementsystem](https://github.com/swisstopo/swissgeol-boreholes-suite) (BDMS)
 
 ## Configure and run Bohrdatenmanagementsystem
 
@@ -7,7 +7,7 @@
 Clone the source repository and cd into the newly created directory
 
 ```bash
-~$ git clone https://github.com/geoadmin/config-bdms.git
+~$ git clone https://github.com/swisstopo/swissgeol-boreholes-config.git
 ~$ cd config-bdms
 ```
 

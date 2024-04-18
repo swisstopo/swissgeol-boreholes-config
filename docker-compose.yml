@@ -16,14 +16,14 @@ services:
     labels:
       - traefik.enable=true
   client:
-    image: ghcr.io/geoadmin/suite-bdms-client:${DOCKER_IMAGE_TAG}
+    image: ghcr.io/swisstopo/swissgeol-boreholes-suite-client:${DOCKER_IMAGE_TAG}
     restart: unless-stopped
     labels:
       - traefik.enable=true
       - traefik.http.routers.client.rule=Host(`${BASE_DOMAIN}`)
       - traefik.http.services.client.loadbalancer.server.port=3000
   api:
-    image: ghcr.io/geoadmin/suite-bdms-api:${DOCKER_IMAGE_TAG}
+    image: ghcr.io/swisstopo/swissgeol-boreholes-suite-api:${DOCKER_IMAGE_TAG}
     restart: unless-stopped
     environment:
       - CONNECTIONSTRINGS__BdmsContext=${DB_CONNECTIONSTRING}
@@ -44,7 +44,7 @@ services:
       - traefik.http.routers.api.rule=Host(`${BASE_DOMAIN}`) && PathPrefix(`/api`)
       - traefik.http.services.api.loadbalancer.server.port=8080
   api-legacy:
-    image: ghcr.io/geoadmin/suite-bdms-api-legacy:${DOCKER_IMAGE_TAG}
+    image: ghcr.io/swisstopo/swissgeol-boreholes-suite-api-legacy:${DOCKER_IMAGE_TAG}
     restart: unless-stopped
     extra_hosts:
       - host.docker.internal:host-gateway
