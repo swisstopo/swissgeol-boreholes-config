@@ -76,6 +76,20 @@ Refer to the [Helm documentation](https://helm.sh/docs/helm/helm/) for more info
 
 This chart is configured to work with [Keel](https://keel.sh/), a tool that scans Kubernetes and Helm releases for outdated images and performs automated updates according the specified `app.version` setting. To enable Keel, you need to deploy it in your cluster using kubectl or Helm. Refer to the [Keel documentation](https://keel.sh/docs/#introduction) for more information on how to do that.
 
+## Validating the Chart
+
+Validate with
+
+```bash
+helm lint .\charts\swissgeol-boreholes
+```
+
+or pretend to install the chart to the cluster and if there is some issue it will show the error.
+
+```bash
+helm install --dry-run swissgeol-boreholes .\charts\swissgeol-boreholes
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
