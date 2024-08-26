@@ -32,6 +32,10 @@ auth:
   # -- The name of the group the user must be a member of
   # -- defaults to "boreholes.swissgeol"
   authorizedGroupName:
+  # -- Enables anonymous mode for the application.
+  # -- In this mode, the application does not require authentication.
+  # -- defaults to false
+  anonymousModeEnabled:
 
 # Database configuration
 database:

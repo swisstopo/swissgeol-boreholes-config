@@ -47,6 +47,7 @@ The following table lists the configurable parameters of the swissgeol-boreholes
 | `app.version`               | Docker image tag      | `latest`                 |
 | `auth.authority`            | Issuer URL            | `""`                     |
 | `auth.audience`             | Client id             | `""`                     |
+| `auth.anonymousModeEnabled` | Enable anonymous mode | `false`                  |
 | `database.host`             | Database host         | `""`                     |
 | `database.name`             | Database name         | `""`                     |
 | `database.username`         | Database username     | `""`                     |

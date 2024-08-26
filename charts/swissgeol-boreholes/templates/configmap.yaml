@@ -16,4 +16,5 @@ data:
   authScopes: {{ .Values.auth.scopes | default "openid profile" | quote }}
   authGroupClaimType: {{ .Values.auth.groupClaimType | default "cognito:groups" | quote }}
   authAuthorizedGroupName: {{ .Values.auth.authorizedGroupName | default "boreholes.swissgeol" | quote }}
+  authAnonymousModeEnabled: {{ .Values.auth.anonymousModeEnabled | default "false" | quote }}
   legacyApiAddress: "http://{{ .Release.Name }}-api-legacy.{{ .Release.Namespace }}.svc.cluster.local"
