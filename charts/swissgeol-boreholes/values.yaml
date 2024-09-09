@@ -11,7 +11,7 @@ app:
   # -- The timezone which will be used in the application
   # -- defaults to "Europe/Zurich"
   timezone:
-  # -- The tag name of the Docker image tags to be deployed
+  # -- The tag name of the Docker image tag to be deployed
   # -- e.g. v2.0.506, latest or edge
   # -- defaults to "latest"
   version:
@@ -32,6 +32,10 @@ auth:
   # -- The name of the group the user must be a member of
   # -- defaults to "boreholes.swissgeol"
   authorizedGroupName:
+  # -- Enables anonymous mode for the application.
+  # -- In this mode, the application does not require authentication.
+  # -- defaults to false
+  anonymousModeEnabled:
 
 # Database configuration
 database:

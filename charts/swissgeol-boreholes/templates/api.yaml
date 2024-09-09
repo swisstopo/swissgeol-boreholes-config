@@ -92,6 +92,11 @@ spec:
             configMapKeyRef:
               name: {{ .Release.Name }}-config
               key: authAuthorizedGroupName
+        - name: Auth__AnonymousModeEnabled
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-config
+              key: authAnonymousModeEnabled
 ---
 apiVersion: v1
 kind: Service
