@@ -8,7 +8,7 @@ _swissgeol-boreholes_ is a web application which allows to easily manage structu
 
 ```bash
 # Add the swissgeol-boreholes Helm repository
-helm repo add swissgeol-boreholes https://swisstopo.github.io/swissgeol-boreholes-suite/
+helm repo add swissgeol-boreholes https://swisstopo.github.io/swissgeol-boreholes-config/
 
 # Update the Helm repositories
 helm repo update
@@ -67,7 +67,7 @@ helm install swissgeol-boreholes swissgeol-boreholes/swissgeol-boreholes \
   --set app.version="edge"
 ```
 
-For a full list of values, you can check the `values.yaml` file or use the `helm show values swisstopo/swissgeol-boreholes` command. Refer to the corresponding Helm [documentation](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing) for more information on how to override settings in a YAML formated file.
+For a full list of values, you can check the `values.yaml` file or use the `helm show values swissgeol-boreholes/swissgeol-boreholes` command. Refer to the corresponding Helm [documentation](https://helm.sh/docs/intro/using_helm/#customizing-the-chart-before-installing) for more information on how to override settings in a YAML formated file.
 
 ## Additional commands
 
@@ -82,13 +82,13 @@ This chart is configured to work with [Keel](https://keel.sh/), a tool that scan
 Validate with
 
 ```bash
-helm lint .\charts\swissgeol-boreholes
+helm lint charts/swissgeol-boreholes
 ```
 
 or pretend to install the chart to the cluster and if there is some issue it will show the error.
 
 ```bash
-helm install --dry-run swissgeol-boreholes .\charts\swissgeol-boreholes
+helm install --dry-run swissgeol-boreholes charts/swissgeol-boreholes
 ```
 
 ## License
