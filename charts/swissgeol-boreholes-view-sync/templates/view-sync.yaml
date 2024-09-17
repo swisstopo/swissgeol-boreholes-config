@@ -20,7 +20,7 @@ spec:
           containers:
             - name: {{ .Release.Name }}
               image: ghcr.io/swisstopo/swissgeol-boreholes-suite-view-sync:{{ .Values.app.version | default "latest" }}
-              imagePullPolicy: IfNotPresent
+              imagePullPolicy: Always
               env:
                 - name: SOURCE_DB_HOST
                   valueFrom:
