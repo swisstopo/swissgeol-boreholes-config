@@ -67,6 +67,11 @@ spec:
             configMapKeyRef:
               name: {{ .Release.Name }}-config
               key: legacyApiAddress
+        - name: ReverseProxy__Clusters__dataExtractionApi__Destinations__dataExtractionApi__Address
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-config
+              key: dataExtractionApiAddress
         - name: Auth__Authority
           valueFrom:
             configMapKeyRef:

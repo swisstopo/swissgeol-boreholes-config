@@ -8,7 +8,7 @@ spec:
     - web
   routes:
     - kind: Rule
-      match: "Host(`{{ .Values.app.domain | default "boreholes.swissgeol.ch" }}`) && PathPrefix(`/api`)"
+      match: "Host(`{{ .Values.app.domain | default "boreholes.swissgeol.ch" }}`) && (PathPrefix(`/api`) || PathPrefix(`/dataextraction`))"
       services:
         - name: {{ .Release.Name }}-api
           port: 80
