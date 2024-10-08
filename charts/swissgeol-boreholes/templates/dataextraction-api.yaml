@@ -51,6 +51,16 @@ spec:
                 configMapKeyRef:
                   name: {{ .Release.Name }}-config
                   key: timezone
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 3
 ---
 apiVersion: v1
 kind: Service
