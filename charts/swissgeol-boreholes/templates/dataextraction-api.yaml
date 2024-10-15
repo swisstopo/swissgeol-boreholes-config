@@ -29,18 +29,16 @@ spec:
                 secretKeyRef:
                   name: {{ .Release.Name }}-secrets
                   key: s3AccessKey
-                  optional: true
             - name: AWS_SECRET_ACCESS_KEY
               valueFrom:
                 secretKeyRef:
                   name: {{ .Release.Name }}-secrets
                   key: s3SecretKey
-                  optional: true
             - name: AWS_S3_BUCKET
               valueFrom:
                 configMapKeyRef:
                   name: {{ .Release.Name }}-config
-                  key: s3bucket
+                  key: s3Bucket
             - name: AWS_ENDPOINT
               valueFrom:
                 configMapKeyRef:

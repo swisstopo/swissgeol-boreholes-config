@@ -9,7 +9,7 @@ data:
   databaseName: {{ .Values.database.name }}
   databasePort: {{ .Values.database.port | default "5432" | quote }}
   s3Endpoint: {{ .Values.s3.endpoint }}
-  s3bucket: {{ .Values.s3.bucket }}
+  s3Bucket: {{ .Values.s3.bucket }}
   s3Secure: {{ .Values.s3.secure | default "1" | quote }}
   authAuthority: {{ .Values.auth.authority | quote }}
   authAudience: {{ .Values.auth.audience | quote }}
