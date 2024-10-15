@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-dataextraction-api
+  namespace: {{ .Release.Namespace }}
+  annotations:
+    keel.sh/policy: force
+    keel.sh/match-tag: 'true'
+    keel.sh/trigger: poll
+spec:
+  replicas: {{ .Values.replicaCount}}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-dataextraction-api
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-dataextraction-api
+    spec:
+      containers:
+        - name: {{ .Release.Name }}-dataextraction-api
+          image: ghcr.io/swisstopo/swissgeol-boreholes-dataextraction-api:{{ .Values.dataextraction.version | default "latest" }}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secrets
+                  key: s3AccessKey
+                  optional: true
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secrets
+                  key: s3SecretKey
+                  optional: true
+            - name: AWS_S3_BUCKET
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: s3bucket
+            - name: AWS_ENDPOINT
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: s3Endpoint
+            - name: TZ
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: timezone
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-dataextraction-api
+  namespace: {{ .Release.Namespace }}
+spec:
+  selector:
+    app: {{ .Release.Name }}-dataextraction-api
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
