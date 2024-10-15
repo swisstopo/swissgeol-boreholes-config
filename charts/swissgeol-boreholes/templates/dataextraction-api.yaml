@@ -40,7 +40,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: {{ .Release.Name }}-config
-                  key: s3bucket
+                  key: s3Bucket
             - name: AWS_ENDPOINT
               valueFrom:
                 configMapKeyRef:
