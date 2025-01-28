@@ -13,7 +13,7 @@ data:
   s3Secure: {{ .Values.s3.secure | default "1" | quote }}
   authAuthority: {{ .Values.auth.authority | quote }}
   authAudience: {{ .Values.auth.audience | quote }}
-  authScopes: {{ .Values.auth.scopes | default "openid profile" | quote }}
+  authScopes: {{ .Values.auth.scopes | default "openid profile email" | quote }}
   authGroupClaimType: {{ .Values.auth.groupClaimType | default "cognito:groups" | quote }}
   authAuthorizedGroupName: {{ .Values.auth.authorizedGroupName | default "boreholes.swissgeol" | quote }}
   authAnonymousModeEnabled: {{ .Values.auth.anonymousModeEnabled | default "false" | quote }}
