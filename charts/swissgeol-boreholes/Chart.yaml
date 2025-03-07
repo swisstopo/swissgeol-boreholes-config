@@ -15,7 +15,6 @@ keywords:
   - dataextraction
   - swissgeol
   - geoadmin
-  - bdms
 sources:
   - https://github.com/swisstopo/swissgeol-boreholes-suite
   - https://github.com/swisstopo/swissgeol-boreholes-config
