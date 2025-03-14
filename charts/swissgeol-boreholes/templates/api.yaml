@@ -102,6 +102,11 @@ spec:
             configMapKeyRef:
               name: {{ .Release.Name }}-config
               key: authAnonymousModeEnabled
+        - name: GoogleAnalytics__TrackingId
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-config
+              key: googleAnalyticsTrackingId
 ---
 apiVersion: v1
 kind: Service

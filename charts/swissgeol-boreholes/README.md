@@ -57,6 +57,7 @@ The following table lists the configurable parameters of the swissgeol-boreholes
 | `s3.bucket`                 | S3 bucket name              | `""`                     |
 | `s3.accessKey`              | S3 access key               | `""`                     |
 | `s3.secretKey`              | S3 secret key               | `""`                     |
+| `googleAnalytics.trackingId`| Google Analytics Tracking ID| `""`                     |
 
 Specify each parameter using the `--set key=value` argument to `helm install`. For example,
 

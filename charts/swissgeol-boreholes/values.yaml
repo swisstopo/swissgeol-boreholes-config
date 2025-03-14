@@ -77,3 +77,9 @@ s3:
   # -- Set to 0 to use a insecure connection
   # -- defaults to 1 (secure connection)
   secure:
+
+# Google Analytics configuration
+googleAnalytics:
+  # -- The tracking ID of the Google Analytics account
+  trackingId:
+

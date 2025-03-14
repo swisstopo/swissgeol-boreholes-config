@@ -19,3 +19,4 @@ data:
   authAnonymousModeEnabled: {{ .Values.auth.anonymousModeEnabled | default "false" | quote }}
   legacyApiAddress: "http://{{ .Release.Name }}-api-legacy.{{ .Release.Namespace }}.svc.cluster.local"
   dataExtractionApiAddress: "http://{{ .Release.Name }}-dataextraction-api.{{ .Release.Namespace }}.svc.cluster.local"
+  googleAnalyticsTrackingId: {{ .Values.googleAnalytics.trackingId | default "" || quote }}
