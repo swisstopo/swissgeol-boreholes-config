@@ -9,7 +9,7 @@ metadata:
     keel.sh/trigger: poll
 spec:
   schedule: "{{ .Values.app.schedule | default "0 0 * * *" }}"
-  timeZone: "Europe/Zurich"
+  timeZone: "{{ .Values.app.timezone | default "Europe/Zurich" }}"
   concurrencyPolicy: Forbid
   successfulJobsHistoryLimit: 3
   failedJobsHistoryLimit: 1

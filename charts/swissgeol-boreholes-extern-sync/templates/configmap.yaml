@@ -6,3 +6,4 @@ metadata:
 data:
   targetDefaultWorkgroupName: {{ .Values.configuration.targetDefaultWorkgroupName }}
   targetDefaultUserSub: {{ .Values.configuration.targetDefaultUserSub }}
+  timezone: {{ .Values.app.timezone | default "Europe/Zurich" | quote }}
