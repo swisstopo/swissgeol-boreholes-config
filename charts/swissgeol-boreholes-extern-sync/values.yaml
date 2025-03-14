@@ -33,8 +33,6 @@ db:
     port:
     # -- The name of the source database
     name:
-    # -- The schema of the source database
-    schema:
     # -- The username to connect to the source database
     username:
     # -- The password to connect to the source database
