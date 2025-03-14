@@ -11,4 +11,4 @@ data:
   targetDatabaseHost: {{ .Values.db.target.host }}
   targetDatabasePort: {{ .Values.db.target.port | default "5432" | quote }}
   targetDatabaseName: {{ .Values.db.target.name }}
-
+  timezone: {{ .Values.app.timezone | default "Europe/Zurich" | quote }}
