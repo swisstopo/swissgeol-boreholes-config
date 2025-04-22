@@ -70,6 +70,8 @@ s3:
   endpoint:
   # -- The name of the S3 bucket
   bucket:
+  # -- The name of the S3 bucket for the photos
+  photosBucket:
   # -- The access key to connect to the S3 bucket
   accessKey:
   # -- The secret key to connect to the S3 bucket
