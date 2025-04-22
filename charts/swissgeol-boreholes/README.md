@@ -55,6 +55,7 @@ The following table lists the configurable parameters of the swissgeol-boreholes
 | `database.password`         | Database password           | `""`                     |
 | `s3.endpoint`               | S3 endpoint                 | `""`                     |
 | `s3.bucket`                 | S3 bucket name              | `""`                     |
+| `s3.photosBucket`           | S3 photos bucket name       | `""`                     |
 | `s3.accessKey`              | S3 access key               | `""`                     |
 | `s3.secretKey`              | S3 secret key               | `""`                     |
 | `googleAnalytics.trackingId`| Google Analytics Tracking ID| `""`                     |
