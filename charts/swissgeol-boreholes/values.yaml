@@ -22,6 +22,20 @@ dataextraction:
   # -- defaults to "latest"
   version:
 
+ocr:
+  # -- The tag name of the Docker image tag to be deployed
+  # -- e.g. v2.0.506, latest or edge
+  # -- defaults to "latest"
+  version:
+  # -- The OCR confidence score threshold to be used.
+  # -- defaults to 0.45
+  confidenceThreshold:
+  # -- Applies OCR more aggressively, also e.g. to images inside
+  # -- digitally-born PDF documents, as long as the newly detected
+  # -- text does not overlap with any pre-existing digital text.
+  # -- defaults to "true"
+  useAggressiveStrategy:
+
 # OpenID Connect configuration
 auth:
   # -- The issuer URL of the OpenID Connect provider
@@ -84,4 +98,3 @@ s3:
 googleAnalytics:
   # -- The tracking ID of the Google Analytics account
   trackingId:
-

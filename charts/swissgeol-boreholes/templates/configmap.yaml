@@ -20,4 +20,8 @@ data:
   authAnonymousModeEnabled: {{ .Values.auth.anonymousModeEnabled | default "false" | quote }}
   legacyApiAddress: "http://{{ .Release.Name }}-api-legacy.{{ .Release.Namespace }}.svc.cluster.local"
   dataExtractionApiAddress: "http://{{ .Release.Name }}-dataextraction-api.{{ .Release.Namespace }}.svc.cluster.local"
+  ocrApiAddress: "http://{{ .Release.Name }}-ocr-api.{{ .Release.Namespace }}.svc.cluster.local"
+  ocrConfidenceThreshold: {{ .Values.ocr.confidenceThreshold | default "0.45" | quote }}
+  ocrUseAggressiveStrategy: {{ .Values.ocr.useAggressiveStrategy | default "true" | quote }}
+  ocrSkipProcessing: {{ .Values.ocr.skipProcessing | default "false" | quote }}
   googleAnalyticsTrackingId: {{ .Values.googleAnalytics.trackingId | default "" | quote }}
