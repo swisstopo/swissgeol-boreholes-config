@@ -77,6 +77,11 @@ spec:
             configMapKeyRef:
               name: {{ .Release.Name }}-config
               key: dataExtractionApiAddress
+        - name: ReverseProxy__Clusters__ocrApi__Destinations__ocrApi__Address
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-config
+              key: ocrApiAddress
         - name: Auth__Authority
           valueFrom:
             configMapKeyRef:

@@ -47,7 +47,6 @@ The following table lists the configurable parameters of the swissgeol-boreholes
 | `db.source.host`                           | Database host                          | config | `""`    |
 | `db.source.port`                           | Database port                          | config | `5432`  |
 | `db.source.name`                           | Database name                          | config | `""`    |
-| `db.source.schema`                         | Database schema                        | config | `""`    |
 | `db.source.username`                       | Database username                      | secret | `""`    |
 | `db.source.password`                       | Database password                      | secret | `""`    |
 | `db.target.host`                           | Database host                          | config | `""`    |

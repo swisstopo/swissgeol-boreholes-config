@@ -40,25 +40,28 @@ helm install swissgeol-boreholes swissgeol-boreholes/swissgeol-boreholes
 
 The following table lists the configurable parameters of the swissgeol-boreholes chart and their default values.
 
-| Parameter                   | Description                 | Default                  |
-| --------------------------- | --------------------------- | ------------------------ |
-| `replicaCount`              | Number of replicas          | `1`                      |
-| `app.domain`                | Base domain name            | `boreholes.swissgeol.ch` |
-| `app.version`               | Docker image tag            | `latest`                 |
-| `dataextraction.version`    | Data extraction API version | `latest`                 |
-| `auth.authority`            | Issuer URL                  | `""`                     |
-| `auth.audience`             | Client id                   | `""`                     |
-| `auth.anonymousModeEnabled` | Enable anonymous mode       | `false`                  |
-| `database.host`             | Database host               | `""`                     |
-| `database.name`             | Database name               | `""`                     |
-| `database.username`         | Database username           | `""`                     |
-| `database.password`         | Database password           | `""`                     |
-| `s3.endpoint`               | S3 endpoint                 | `""`                     |
-| `s3.bucket`                 | S3 bucket name              | `""`                     |
-| `s3.photosBucket`           | S3 photos bucket name       | `""`                     |
-| `s3.accessKey`              | S3 access key               | `""`                     |
-| `s3.secretKey`              | S3 secret key               | `""`                     |
-| `googleAnalytics.trackingId`| Google Analytics Tracking ID| `""`                     |
+| Parameter                    | Description                    | Default                  |
+| ---------------------------- | ------------------------------ | ------------------------ |
+| `replicaCount`               | Number of replicas             | `1`                      |
+| `app.domain`                 | Base domain name               | `boreholes.swissgeol.ch` |
+| `app.version`                | Docker image tag               | `latest`                 |
+| `dataextraction.version`     | Data extraction API version    | `latest`                 |
+| `auth.authority`             | Issuer URL                     | `""`                     |
+| `auth.audience`              | Client id                      | `""`                     |
+| `auth.anonymousModeEnabled`  | Enable anonymous mode          | `false`                  |
+| `database.host`              | Database host                  | `""`                     |
+| `database.name`              | Database name                  | `""`                     |
+| `database.username`          | Database username              | `""`                     |
+| `database.password`          | Database password              | `""`                     |
+| `s3.endpoint`                | S3 endpoint                    | `""`                     |
+| `s3.bucket`                  | S3 bucket name                 | `""`                     |
+| `s3.photosBucket`            | S3 photos bucket name          | `""`                     |
+| `s3.accessKey`               | S3 access key                  | `""`                     |
+| `s3.secretKey`               | S3 secret key                  | `""`                     |
+| `ocr.version`                | OCR API version                | `latest`                 |
+| `ocr.confidenceThreshold`    | OCR confidence score threshold | `0.45`                   |
+| `ocr.useAggressiveStrategy`  | OCR processing strategy        | `true`                   |
+| `googleAnalytics.trackingId` | Google Analytics Tracking ID   | `""`                     |
 
 Specify each parameter using the `--set key=value` argument to `helm install`. For example,
 
