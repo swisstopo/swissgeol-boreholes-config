@@ -46,6 +46,8 @@ spec:
                 configMapKeyRef:
                   name: {{ .Release.Name }}-config
                   key: s3Endpoint
+            - name: S3_INPUT_FOLDER
+              value: ''
             - name: S3_OUTPUT_BUCKET
               valueFrom:
                 configMapKeyRef:
@@ -56,6 +58,8 @@ spec:
                 configMapKeyRef:
                   name: {{ .Release.Name }}-config
                   key: s3Endpoint
+            - name: S3_OUTPUT_FOLDER
+              value: ''
             - name: CONFIDENCE_THRESHOLD
               valueFrom:
                 configMapKeyRef:
