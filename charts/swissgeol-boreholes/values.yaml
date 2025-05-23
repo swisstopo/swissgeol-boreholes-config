@@ -35,6 +35,8 @@ ocr:
   # -- text does not overlap with any pre-existing digital text.
   # -- defaults to "true"
   useAggressiveStrategy:
+  # -- The AWS role ARN to be used for the OCR API.
+  awsRoleArn:
 
 # OpenID Connect configuration
 auth:

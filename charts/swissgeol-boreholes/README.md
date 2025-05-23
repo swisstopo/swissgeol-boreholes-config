@@ -61,6 +61,7 @@ The following table lists the configurable parameters of the swissgeol-boreholes
 | `ocr.version`                | OCR API version                | `latest`                 |
 | `ocr.confidenceThreshold`    | OCR confidence score threshold | `0.45`                   |
 | `ocr.useAggressiveStrategy`  | OCR processing strategy        | `true`                   |
+| `ocr.awsRoleArn`             | OCR API AWS role ARN           | `""`                     |
 | `googleAnalytics.trackingId` | Google Analytics Tracking ID   | `""`                     |
 
 Specify each parameter using the `--set key=value` argument to `helm install`. For example,

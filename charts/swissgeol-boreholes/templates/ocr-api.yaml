@@ -17,6 +17,7 @@ spec:
       labels:
         app: {{ .Release.Name }}-ocr-api
     spec:
+      serviceAccountName: {{ .Release.Name }}-ocr-api
       containers:
         - name: {{ .Release.Name }}-ocr-api
           image: ghcr.io/swisstopo/swissgeol-ocr-api:{{ .Values.ocr.version | default "latest" }}
