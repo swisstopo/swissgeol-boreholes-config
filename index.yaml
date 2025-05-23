@@ -3,6 +3,31 @@ entries:
   swissgeol-boreholes:
   - apiVersion: v2
     appVersion: v2.1.870
+    created: "2025-05-23T07:09:21.875874131Z"
+    description: Borehole Data Management System
+    digest: a65bdc73c830f2553765cf7da147b8a029183a74648f4c2054c62d110d6a40ec
+    home: https://www.swissgeol.ch/en
+    icon: https://raw.githubusercontent.com/swisstopo/swissgeol-boreholes-suite/main/src/client/public/favicon.ico
+    keywords:
+    - boreholes
+    - dataextraction
+    - swissgeol
+    - geoadmin
+    maintainers:
+    - email: support@geowerkstatt.ch
+      name: geowerkstatt GmbH
+      url: https://www.geowerkstatt.ch/
+    name: swissgeol-boreholes
+    sources:
+    - https://github.com/swisstopo/swissgeol-boreholes-suite
+    - https://github.com/swisstopo/swissgeol-boreholes-config
+    - https://github.com/swisstopo/swissgeol-boreholes-dataextraction
+    type: application
+    urls:
+    - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-0.7.0/swissgeol-boreholes-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
+    appVersion: v2.1.870
     created: "2025-05-20T14:10:54.6214068Z"
     description: Borehole Data Management System
     digest: 8148ef523c00f544ccabe810a7f4a1861e4ef9e4d446a5a17d5dfb38ae02074e
@@ -504,6 +529,31 @@ entries:
   swissgeol-boreholes-extern-sync:
   - apiVersion: v2
     appVersion: v2.1.870
+    created: "2025-05-23T07:09:21.956624168Z"
+    description: Synchronizes selected drilling data between a source and a target
+      database.
+    digest: 8f119eb53a87dd98f872f0faff901f860e3527e3591ead9d45c54e9f78d21145
+    home: https://www.swissgeol.ch/en
+    icon: https://raw.githubusercontent.com/swisstopo/swissgeol-boreholes-suite/main/src/client/public/favicon.ico
+    keywords:
+    - boreholes
+    - swissgeol
+    - geoadmin
+    - sync
+    maintainers:
+    - email: support@geowerkstatt.ch
+      name: geowerkstatt GmbH
+      url: https://www.geowerkstatt.ch/
+    name: swissgeol-boreholes-extern-sync
+    sources:
+    - https://github.com/swisstopo/swissgeol-boreholes-suite
+    - https://github.com/swisstopo/swissgeol-boreholes-config
+    type: application
+    urls:
+    - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-extern-sync-0.1.7/swissgeol-boreholes-extern-sync-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: v2.1.870
     created: "2025-05-20T14:10:54.810025373Z"
     description: Synchronizes selected drilling data between a source and a target
       database.
@@ -653,6 +703,32 @@ entries:
     - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-extern-sync-0.1.1/swissgeol-boreholes-extern-sync-0.1.1.tgz
     version: 0.1.1
   swissgeol-boreholes-view-sync:
+  - apiVersion: v2
+    appVersion: v2.1.870
+    created: "2025-05-23T07:09:22.054569038Z"
+    description: Synchronizes freely available drilling data from a source database
+      to a target database.
+    digest: b8201a9c2cbcb799465b203f17f3be3141180dd0f2f8d3b5f40af0aa2b39fb09
+    home: https://www.swissgeol.ch/en
+    icon: https://raw.githubusercontent.com/swisstopo/swissgeol-boreholes-suite/main/src/client/public/favicon.ico
+    keywords:
+    - boreholes
+    - swissgeol
+    - geoadmin
+    - sync
+    - free
+    maintainers:
+    - email: support@geowerkstatt.ch
+      name: geowerkstatt GmbH
+      url: https://www.geowerkstatt.ch/
+    name: swissgeol-boreholes-view-sync
+    sources:
+    - https://github.com/swisstopo/swissgeol-boreholes-suite
+    - https://github.com/swisstopo/swissgeol-boreholes-config
+    type: application
+    urls:
+    - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-view-sync-0.2.13/swissgeol-boreholes-view-sync-0.2.13.tgz
+    version: 0.2.13
   - apiVersion: v2
     appVersion: v2.1.870
     created: "2025-05-20T14:10:54.951302012Z"
@@ -1052,4 +1128,4 @@ entries:
     urls:
     - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-view-sync-0.1.1/swissgeol-boreholes-view-sync-0.1.1.tgz
     version: 0.1.1
-generated: "2025-05-20T14:10:54.951594394Z"
+generated: "2025-05-23T07:09:22.054877203Z"
