@@ -25,16 +25,6 @@ spec:
           ports:
             - containerPort: 8000
           env:
-            - name: AWS_ACCESS_KEY_ID
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Release.Name }}-secrets
-                  key: s3AccessKey
-            - name: AWS_SECRET_ACCESS_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: {{ .Release.Name }}-secrets
-                  key: s3SecretKey
             - name: AWS_DEFAULT_REGION
               value: eu-central-1
             - name: S3_INPUT_BUCKET
