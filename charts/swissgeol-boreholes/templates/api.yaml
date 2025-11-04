@@ -46,6 +46,11 @@ spec:
             configMapKeyRef:
               name: {{ .Release.Name }}-config
               key: s3PhotosBucket
+        - name: S3__LOGFILES_BUCKET_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: {{ .Release.Name }}-config
+              key: s3LogFilesBucket
         - name: S3__ENDPOINT
           valueFrom:
             configMapKeyRef:
