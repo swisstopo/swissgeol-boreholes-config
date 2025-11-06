@@ -11,7 +11,7 @@ data:
   s3Endpoint: {{ .Values.s3.endpoint }}
   s3Bucket: {{ .Values.s3.bucket }}
   s3PhotosBucket: {{ .Values.s3.photosBucket }}
-  s3LogFilesBucket: { { .Values.s3.logFilesBucket } }
+  s3LogFilesBucket: {{ .Values.s3.logFilesBucket }}
   s3Secure: {{ .Values.s3.secure | default "1" | quote }}
   authAuthority: {{ .Values.auth.authority | quote }}
   authAudience: {{ .Values.auth.audience | quote }}
