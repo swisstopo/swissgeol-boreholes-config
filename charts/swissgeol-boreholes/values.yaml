@@ -88,6 +88,8 @@ s3:
   bucket:
   # -- The name of the S3 bucket for the photos
   photosBucket:
+  # -- The name of the S3 bucket for the log files
+  logFilesBucket:
   # -- The access key to connect to the S3 bucket
   accessKey:
   # -- The secret key to connect to the S3 bucket

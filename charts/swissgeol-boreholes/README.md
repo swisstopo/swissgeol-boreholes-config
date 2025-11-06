@@ -56,6 +56,7 @@ The following table lists the configurable parameters of the swissgeol-boreholes
 | `s3.endpoint`                | S3 endpoint                    | `""`                     |
 | `s3.bucket`                  | S3 bucket name                 | `""`                     |
 | `s3.photosBucket`            | S3 photos bucket name          | `""`                     |
+| `s3.logFilesBucket`          | S3 log files bucket name       | `""`                     |
 | `s3.accessKey`               | S3 access key                  | `""`                     |
 | `s3.secretKey`               | S3 secret key                  | `""`                     |
 | `ocr.version`                | OCR API version                | `latest`                 |
