@@ -2,6 +2,31 @@ apiVersion: v1
 entries:
   swissgeol-boreholes:
   - apiVersion: v2
+    appVersion: v2.1.1427
+    created: "2026-01-27T09:05:12.715905321Z"
+    description: Borehole Data Management System
+    digest: 8d5be1d5a9f245193c193cf88380e350f12276538f5b50f634807e3c2bec53a0
+    home: https://www.swissgeol.ch/en
+    icon: https://raw.githubusercontent.com/swisstopo/swissgeol-boreholes-suite/main/src/client/public/favicon.ico
+    keywords:
+    - boreholes
+    - dataextraction
+    - swissgeol
+    - geoadmin
+    maintainers:
+    - email: support@geowerkstatt.ch
+      name: geowerkstatt GmbH
+      url: https://www.geowerkstatt.ch/
+    name: swissgeol-boreholes
+    sources:
+    - https://github.com/swisstopo/swissgeol-boreholes-suite
+    - https://github.com/swisstopo/swissgeol-boreholes-config
+    - https://github.com/swisstopo/swissgeol-boreholes-dataextraction
+    type: application
+    urls:
+    - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-0.9.0/swissgeol-boreholes-0.9.0.tgz
+    version: 0.9.0
+  - apiVersion: v2
     appVersion: v2.1.870
     created: "2026-01-13T10:29:21.484150019Z"
     description: Borehole Data Management System
@@ -653,6 +678,31 @@ entries:
     version: 0.2.1
   swissgeol-boreholes-extern-sync:
   - apiVersion: v2
+    appVersion: v2.1.1427
+    created: "2026-01-27T09:05:12.911221655Z"
+    description: Synchronizes selected drilling data between a source and a target
+      database.
+    digest: fbf75f39a9c155e5721624600b13e4e80a1725e60682f42b87935b3914a1c544
+    home: https://www.swissgeol.ch/en
+    icon: https://raw.githubusercontent.com/swisstopo/swissgeol-boreholes-suite/main/src/client/public/favicon.ico
+    keywords:
+    - boreholes
+    - swissgeol
+    - geoadmin
+    - sync
+    maintainers:
+    - email: support@geowerkstatt.ch
+      name: geowerkstatt GmbH
+      url: https://www.geowerkstatt.ch/
+    name: swissgeol-boreholes-extern-sync
+    sources:
+    - https://github.com/swisstopo/swissgeol-boreholes-suite
+    - https://github.com/swisstopo/swissgeol-boreholes-config
+    type: application
+    urls:
+    - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-extern-sync-0.2.0/swissgeol-boreholes-extern-sync-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: v2.1.870
     created: "2026-01-13T10:29:21.712975559Z"
     description: Synchronizes selected drilling data between a source and a target
@@ -953,6 +1003,32 @@ entries:
     - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-extern-sync-0.1.1/swissgeol-boreholes-extern-sync-0.1.1.tgz
     version: 0.1.1
   swissgeol-boreholes-view-sync:
+  - apiVersion: v2
+    appVersion: v2.1.1427
+    created: "2026-01-27T09:05:13.170133873Z"
+    description: Synchronizes freely available drilling data from a source database
+      to a target database.
+    digest: 6f33418cae8341e62386d829cd2b7225ff3cdc5986f50480e08fa193de50c7eb
+    home: https://www.swissgeol.ch/en
+    icon: https://raw.githubusercontent.com/swisstopo/swissgeol-boreholes-suite/main/src/client/public/favicon.ico
+    keywords:
+    - boreholes
+    - swissgeol
+    - geoadmin
+    - sync
+    - free
+    maintainers:
+    - email: support@geowerkstatt.ch
+      name: geowerkstatt GmbH
+      url: https://www.geowerkstatt.ch/
+    name: swissgeol-boreholes-view-sync
+    sources:
+    - https://github.com/swisstopo/swissgeol-boreholes-suite
+    - https://github.com/swisstopo/swissgeol-boreholes-config
+    type: application
+    urls:
+    - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-view-sync-0.3.0/swissgeol-boreholes-view-sync-0.3.0.tgz
+    version: 0.3.0
   - apiVersion: v2
     appVersion: v2.1.870
     created: "2026-01-13T10:29:21.976357778Z"
@@ -1508,4 +1584,4 @@ entries:
     urls:
     - https://github.com/swisstopo/swissgeol-boreholes-config/releases/download/swissgeol-boreholes-view-sync-0.1.1/swissgeol-boreholes-view-sync-0.1.1.tgz
     version: 0.1.1
-generated: "2026-01-13T10:29:21.976791955Z"
+generated: "2026-01-27T09:05:13.170724589Z"
